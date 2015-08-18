@@ -1,8 +1,5 @@
-# MayOne.us RELOADED
+# Lessig2016
 
-
-[![Build Status](https://travis-ci.org/MayOneUS/pledgeservice.svg?branch=master)](https://travis-ci.org/MayOneUS/pledgeservice)
-[![Coverage Status](https://coveralls.io/repos/MayOneUS/pledgeservice/badge.png?branch=master)](https://coveralls.io/r/MayOneUS/pledgeservice?branch=master)
 
 We're trying a different architecture on GAE.
 
