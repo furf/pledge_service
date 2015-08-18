@@ -6,10 +6,6 @@ We're trying a different architecture on GAE.
 
 This project is licensed under the Apache License, version 2.
 
-## HELP NEEDED!
-
-If you know a thing or two about computers and youre're interested in
-contributing, check out https://github.com/MayOneUS/wiki/wiki
 
 ## Design sketch
 
@@ -73,8 +69,8 @@ We have 4 deployment environments available, all of which can be set up with gru
   whatever we want here because the data's all fake. It also uses Stripe's test keys, so feel free to submit test
   transactions with credit card 4242 4242 4242 4242. To deploy, run `./node_modules/.bin/grunt dev`, and then
   `appcfg.py --oauth2 update build/`.
-  When testing, it works best to hit this URL: https://pledgedev.mayday.us/pledge.
-* **staging**: This is the real app, but a separate version that's available at https://staging-dot-mayday-pac.appspot.com/.
+  When testing, it works best to hit this URL: https://pledge-test.lessigforpresident.com/pledge.
+* **staging**: This is the real app, but a separate version that's available at https://lessig-trust-test.appspot.com/.
   Notably, it uses the same datastore as prod, and the real stripe keys. Any code that touches
   the data should be deployed here with caution, but if not, you can be a little lax since real
   traffic doesn't hit it. To deploy, run `./node_modules/.bin/grunt staging`, and then
