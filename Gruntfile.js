@@ -16,6 +16,12 @@ var DEV_CONFIG = {
   productionPaypal: false,
 };
 
+var STAGING_CONFIG = {
+  appName: 'lessig-trust',
+  appVersion: 'staging',
+  productionPaypal: true,
+};
+
 var LESSIG_CONFIG = {
   appName: 'lessig-trust',
   appVersion: '1',
@@ -62,7 +68,6 @@ module.exports = function(grunt) {
       local : preprocessAppYaml(LOCAL_CONFIG),
       dev: preprocessAppYaml(DEV_CONFIG),
       staging: preprocessAppYaml(STAGING_CONFIG),
-      prod: preprocessAppYaml(PROD_CONFIG),
       lessig: preprocessAppYaml(LESSIG_CONFIG),
       
     },
@@ -105,7 +110,6 @@ module.exports = function(grunt) {
       local: createConfigFile(LOCAL_CONFIG),
       dev: createConfigFile(DEV_CONFIG),
       staging: createConfigFile(STAGING_CONFIG),
-      prod: createConfigFile(PROD_CONFIG),
       lessig:createConfigFile(LESSIG_CONFIG)
     },
 
@@ -147,8 +151,6 @@ module.exports = function(grunt) {
                      [ 'build', 'preprocess:dev', 'file-creator:dev' ]);
   grunt.registerTask('staging', 'Builds for the STAGING appengine environment.',
                      [ 'build', 'preprocess:staging', 'file-creator:staging' ]);
-  grunt.registerTask('prod', 'Builds for the PROD appengine environment.',
-                     [ 'build', 'preprocess:prod', 'file-creator:prod' ]);
   grunt.registerTask('lessig', 'Builds the live lessig app.',
                      [ 'build', 'preprocess:lessig', 'file-creator:lessig' ]);
 
